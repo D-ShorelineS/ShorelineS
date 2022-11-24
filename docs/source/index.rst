@@ -10,10 +10,4 @@ Contents
 
 .. toctree::
 
-   Introduction 
-   Description of ShorleineS 
-   Technical description of processes and entities 
-   Getting Started 
-   Processing 
-   References 
-   Appendix
+   Introduction
