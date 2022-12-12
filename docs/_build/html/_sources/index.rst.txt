@@ -3,18 +3,23 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to ShorelineS Documentation's documentation!
+Welcome to ShorelineS' documentation!
 ====================================================
+Contents:
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
+   :maxdepth: 1
+   
+   Introduction/Introduction
+   Description_of_ShorleineS/Description_of_ShorleineS
 
 
 Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
+* Source code: 
+* Home page: 
+* Email: *ShorelineS@deltares.nl*
+
