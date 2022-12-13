@@ -5,13 +5,26 @@
 
 Welcome to ShorelineS' documentation!
 ====================================================
-Contents:
+**Contents:**
 
 .. toctree::
    :maxdepth: 1
+   :caption: Introduction:
    
    Introduction/Introduction
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Description of ShorelineS:
+
    Description_of_ShorleineS/Description_of_ShorleineS
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Technical description of processes and entities:
+
+   Technical_description/Headings
+   
 
 
 Indices and tables
@@ -19,7 +32,7 @@ Indices and tables
 
 * :ref:`genindex`
 * :ref:`search`
-* Source code: 
-* Home page: 
-* Email: *ShorelineS@deltares.nl*
+* Link to source code: 
+* Link to Website: 
+* Contact: *ShorelineS@deltares.nl*
 

@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Grid generation &#8212; ShorelineS 1.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="How the model works" href="../Description_of_ShorleineS/Description_of_ShorleineS.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="grid-generation">
+<h1>Grid generation<a class="headerlink" href="#grid-generation" title="Permalink to this headline">¶</a></h1>
+</section>
+<section id="computing-transports">
+<h1>Computing transports<a class="headerlink" href="#computing-transports" title="Permalink to this headline">¶</a></h1>
+</section>
+<section id="coastline-change-mechanism">
+<h1>Coastline change mechanism<a class="headerlink" href="#coastline-change-mechanism" title="Permalink to this headline">¶</a></h1>
+</section>
+<section id="high-angle-waves-and-spit-growth">
+<h1>High-angle waves and spit growth<a class="headerlink" href="#high-angle-waves-and-spit-growth" title="Permalink to this headline">¶</a></h1>
+</section>
+<section id="overwash-at-barriers">
+<h1>Overwash at barriers<a class="headerlink" href="#overwash-at-barriers" title="Permalink to this headline">¶</a></h1>
+</section>
+<section id="merging-and-splitting-of-segments">
+<h1>Merging and splitting of segments<a class="headerlink" href="#merging-and-splitting-of-segments" title="Permalink to this headline">¶</a></h1>
+</section>
+<section id="nourishments-and-sinks">
+<h1>Nourishments and sinks<a class="headerlink" href="#nourishments-and-sinks" title="Permalink to this headline">¶</a></h1>
+</section>
+<section id="bypassing-at-groynes">
+<h1>Bypassing at groynes<a class="headerlink" href="#bypassing-at-groynes" title="Permalink to this headline">¶</a></h1>
+</section>
+<section id="sheltering-or-wave-diffraction-at-breakwaters">
+<h1>Sheltering or wave diffraction at breakwaters<a class="headerlink" href="#sheltering-or-wave-diffraction-at-breakwaters" title="Permalink to this headline">¶</a></h1>
+</section>
+<section id="bypassing-and-beach-protection-at-revetments">
+<h1>Bypassing and beach protection at revetments<a class="headerlink" href="#bypassing-and-beach-protection-at-revetments" title="Permalink to this headline">¶</a></h1>
+</section>
+<section id="sediment-availability">
+<h1>Sediment availability<a class="headerlink" href="#sediment-availability" title="Permalink to this headline">¶</a></h1>
+</section>
+<section id="middle-shoreface-buffer-volume">
+<h1>Middle shoreface buffer volume<a class="headerlink" href="#middle-shoreface-buffer-volume" title="Permalink to this headline">¶</a></h1>
+</section>
+<section id="dune-growth-and-erosion">
+<h1>Dune growth and erosion<a class="headerlink" href="#dune-growth-and-erosion" title="Permalink to this headline">¶</a></h1>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">ShorelineS</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Introduction:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Intro_details.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Intro_details.html#readers-guide">Readers Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Intro_details.html#system-requirements">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Intro_details.html#installation-guide">Installation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Description of ShorelineS:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Description_of_ShorleineS/Description_of_ShorleineS.html">How the model works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Description_of_ShorleineS/Description_of_ShorleineS.html#typical-applications">Typical applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Description_of_ShorleineS/Description_of_ShorleineS.html#required-data">Required data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Description_of_ShorleineS/Description_of_ShorleineS.html#model-input">Model input</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Description_of_ShorleineS/Description_of_ShorleineS.html#model-output">Model output</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Technical description of processes and entities:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Grid generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#computing-transports">Computing transports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#coastline-change-mechanism">Coastline change mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#high-angle-waves-and-spit-growth">High-angle waves and spit growth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#overwash-at-barriers">Overwash at barriers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#merging-and-splitting-of-segments">Merging and splitting of segments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#nourishments-and-sinks">Nourishments and sinks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#bypassing-at-groynes">Bypassing at groynes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#sheltering-or-wave-diffraction-at-breakwaters">Sheltering or wave diffraction at breakwaters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#bypassing-and-beach-protection-at-revetments">Bypassing and beach protection at revetments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#sediment-availability">Sediment availability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#middle-shoreface-buffer-volume">Middle shoreface buffer volume</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#dune-growth-and-erosion">Dune growth and erosion</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../Description_of_ShorleineS/Description_of_ShorleineS.html" title="previous chapter">How the model works</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Mostafa Saleh.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/Technical_description/Headings.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
