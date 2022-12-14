@@ -9,6 +9,7 @@ Welcome to the ShorelineS' documentation!
 
 .. toctree::
    :maxdepth: 1
+   :caption: Introduction:
    
    Introduction/Introduction
    Description_of_ShorleineS/Description_of_ShorleineS
