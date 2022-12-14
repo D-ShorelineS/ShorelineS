@@ -12,7 +12,7 @@ Welcome to the ShorelineS' documentation!
    
    Introduction/Introduction
    Description_of_ShorelineS/Description_of_ShorelineS
-   Technical_description/Headings
+   Technical_description/Technical_description
    
 
 

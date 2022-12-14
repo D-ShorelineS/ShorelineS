@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.abspath('../..'))
 # -- Project information -----------------------------------------------------
 
 project = 'ShorelineS'
-copyright = '2022, Mostafa Saleh'
+copyright = '2022, IHE Delft & Deltares'
 author = 'Mostafa Saleh'
 
 # The full version, including alpha/beta/rc tags
