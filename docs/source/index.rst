@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to the ShorelineS' documentation!
+Welcome to the documentation of ShorelineS!
 ====================================================
 **Contents:**
 
@@ -13,6 +13,10 @@ Welcome to the ShorelineS' documentation!
    Introduction/Introduction
    Description_of_ShorelineS/Description_of_ShorelineS
    Technical_description/Technical_description
+   Getting_started/Getting_started
+   Processing/Processing
+   References/References
+   Appendix/Appendix
    
 
 
