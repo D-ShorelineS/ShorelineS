@@ -23,7 +23,7 @@ simulation continues.
    :width: 400px
    :align: center
 
-   Coastline-following coordinate system and definition of wave and coast angles. :math: `\varphi_{c}`\  is the orientation of the shore normal with respect to North; :math:`\varphi_{w}`\  is the angle of incidence of the waves with respect to North and :math:`\varphi_{loc}`\  is the local angle between waves and coast, defined as :math:`\varphi_{c} - \varphi_{w}`.
+   Coastline-following coordinate system and definition of wave and coast angles. :math:`\varphi_{c}`\  is the orientation of the shore normal with respect to North; :math:`\varphi_{w}`\  is the angle of incidence of the waves with respect to North and :math:`\varphi_{loc}`\  is the local angle between waves and coast, defined as :math:`\varphi_{c} - \varphi_{w}`.
 
 Basic equation
 --------------
@@ -31,8 +31,9 @@ Basic equation
 The basic equation for the updating of the coastline position is based
 on the conservation of sediment:
 
-.. math::
+.. Math::
    :label:
+
    \frac{\partial n}{\partial t} = - \frac{1}{D_{c} \frac{\partial Q_{s}}{\partial s} - \frac{\text{RSLR}}{\tan\beta} + \frac{1}{D_{c}} \sum q_{i}
 
 where *n* is the cross-shore coordinate, *s* the longshore coordinate,
@@ -116,11 +117,11 @@ the relative angle of waves at the breaking point; *b* and *K\ 2* are
 the calibration coefficients of CERC1 and CERC2 formulations
 respectively, which are computed as :.
 
-.. math::
+.. Math::
    :label:
 `b = \frac{k\rho\sqrt\{g/k}}\{16(\rho_{s} - \rho)(1 - p)}`
 
-.. math::
+.. Math::
    :label:
 `K_{2} = (\frac{\sqrt\{g\gamma}}\{2\pi})\^{}\frac{1}\{5} K_{1},K_{1}\sim0.4m\^{}\{1/2}/s`
 
@@ -212,7 +213,7 @@ too much smoothing may lead to a loss of planform area and will tend to
 straighten out sections that should not move at all. The smoothing
 formulation applied is a simple 3-point smoothing according to:
 
-.. math::
+.. Math::
    :label:
 `s_{i,smooth} = fs_{i - 1} + (1 - 2f)s_{i} + fs_{i + 1}`
 
@@ -255,7 +256,7 @@ is calculated for each segment. The difference leads the points to build
 out or to shrink. The mass conservation equation is solved using a
 staggered forward time–central space explicit scheme (see Figure 1):
 
-.. math::
+.. Math::
    :label:
 `\Delta\ n_{i}\^{}j = - \frac{1}{D_{c} \frac{2(Q_{s.i}\^{}j - Q_{s,i - 1}\^{}j)}\{L_{i}\Delta\ t`
 
@@ -267,7 +268,7 @@ the considered grid element computed from
 normal displacement it follows that the change in position of point *i*
 then becomes:
 
-.. math::
+.. Math::
    :label:
 `\Delta\ x_{i}\^{}j = - \Delta\ n_{i}\^{}j\left(y_{i + 1} - y_{i - 1}\right)/L_{i}\bigm\Delta\ y_{i}\^{}j = \Delta\ n_{i}\^{}j\left(x_{i + 1} - x_{i - 1}\right)/L_{i}\bigmx_{i}\^{}\{j + 1} = x_{i}\^{}j + \Delta\ x_{i}\^{}j\bigmy_{i}\^{}\{j + 1} = y_{i}\^{}j + \Delta\ y_{i}\^{}j`
 
@@ -275,7 +276,7 @@ The scheme can be shown to be conserving the land area. Since an
 explicit scheme is applied, the time step is limited by the following
 criterion (Vitousek & Barnard, 2015):
 
-.. math::
+.. Math::
    :label:
 `\frac{\varepsilon\Delta\ t}\{\Delta\ s\^{}2} < \frac{1}\{2}`
 
@@ -283,7 +284,7 @@ where the diffusivity :math: `\varepsilon` is related to the
 maximum gradient of the sediment transport with respect to the wave
 angle relative to the coast, which can be approximated by:
 
-.. math::
+.. Math::
    :label:
 `\{\varepsilon\ cmax}_{max}`
 
@@ -291,7 +292,7 @@ where *Q\ max* is the maximum transport rate in the model.
 
 Therefore the following is obtained:
 
-.. math::
+.. Math::
    :label:
 `\Delta\ t < \frac{D_{c}\Delta\ s\^{}2}\{4Q_{max}}`
 
@@ -410,7 +411,7 @@ moves towards its downdrift side. In that case the lateral boundary
 condition at grid point *i* (see Figure SI05), which is located at the
 groyne representing the bypassed volume can be expressed as:
 
-.. math::
+.. Math::
    :label:
 `QS_{i} = \text{BPFQ}S_{i - 1}`
 
@@ -424,7 +425,7 @@ and to leave the sheltered area untouched. To do so numerically, the
 lateral boundary conditions at the downdrift side of the groyne are set
 as follows:
 
-.. math::
+.. Math::
    :label:
 `Q\{S_{i}}_{+ 1} = Q\{S_{i}}_{+ 2}... = Q\{S_{i}}_{last} = QS_{i}`
 
@@ -463,7 +464,7 @@ the structure (Hanson, 1989), and represents the time-dependent depth
 for longshore sediment transport, which is often less than closure depth
 *D\ c*, and can be estimated as:
 
-.. math::
+.. Math::
    :label:
 `D_{LT} = \frac{A_{w}}\{\gamma}\left(H_{1/3}\right)_{b}`
 
@@ -475,7 +476,7 @@ is the significant wave height at the line of breaking [m].
 Based on the assumption of equilibrium profile shape (Dean, 1991), the
 water depth at the structure’s head *D\ s* can be determined as:
 
-.. math::
+.. Math::
    :label:
 `D_{s} = A_{p}\{y_{str}}\^{}\{2/3}`
 
@@ -484,7 +485,7 @@ where *A\ p* is the sediment scale parameter [m\ :sup:`1/3`] and
 of the coastline [m]. In that case, the bypassing factor (*BPF*) is
 estimated based on the following equation:
 
-.. math::
+.. Math::
    :label:
 `\text{BPF} = 1 - \frac{D_{s}}\{D_{LT}}`
 
