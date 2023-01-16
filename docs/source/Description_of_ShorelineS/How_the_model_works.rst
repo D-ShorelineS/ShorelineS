@@ -23,7 +23,7 @@ simulation continues.
    :width: 400px
    :align: center
 
-   Coastline-following coordinate system and definition of wave and coast angles. :math: `\varphi_{c}` is the orientation of the shore normal with respect to North; :math:`\varphi_{w}`\ is the angle of incidence of the waves with respect to North and :math:`\varphi_{loc}`\ is the local angle between waves and coast, defined as :math:`\varphi_{c} - \varphi_{w}`.
+   Coastline-following coordinate system and definition of wave and coast angles. :math: `\varphi_{c}`\  is the orientation of the shore normal with respect to North; :math:`\varphi_{w}`\  is the angle of incidence of the waves with respect to North and :math:`\varphi_{loc}`\  is the local angle between waves and coast, defined as :math:`\varphi_{c} - \varphi_{w}`.
 
 Basic equation
 --------------
@@ -33,7 +33,7 @@ on the conservation of sediment:
 
 .. math::
    :label:
-   \frac{\partial n}{\partial t} = - \frac{1}{D_{c}\frac{\partial Q_{s}{\partial s} - \frac{\text{RSLR}}{\tan\beta} + \frac{1}{D_{c}\sum\ q_{i}
+   \frac{\partial n}{\partial t} = - \frac{1}{D_{c} \frac{\partial Q_{s}}{\partial s} - \frac{\text{RSLR}}{\tan\beta} + \frac{1}{D_{c}} \sum q_{i}
 
 where *n* is the cross-shore coordinate, *s* the longshore coordinate,
 *t* is time, *D\ c* is the active profile height, *Q\ s* is the
@@ -257,7 +257,7 @@ staggered forward time–central space explicit scheme (see Figure 1):
 
 .. math::
    :label:
-`\Delta\ n_{i}\^{}j = - \frac{1}\{D_{c}\frac{2(Q_{s.i}\^{}j - Q_{s,i - 1}\^{}j)}\{L_{i}\Delta\ t`
+`\Delta\ n_{i}\^{}j = - \frac{1}{D_{c} \frac{2(Q_{s.i}\^{}j - Q_{s,i - 1}\^{}j)}\{L_{i}\Delta\ t`
 
 where *j* is the time step index, :math:`\Delta\ t`\ is the
 time step (yr), *i* is the point/node index and *L\ i* is the length of
