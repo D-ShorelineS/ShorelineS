@@ -23,7 +23,7 @@ simulation continues.
    :width: 400px
    :align: center
 
-   Coastline-following coordinate system and definition of wave and coast angles. :math:`\varphi_ {c}` is the orientation of the shore normal with respect to North; :math:`\varphi_{w}`\ is the angle of incidence of the waves with respect to North and :math:`\varphi_{loc}`\ is the local angle between waves and coast, defined as :math:`\varphi_{c} - \varphi_{w}`.
+   Coastline-following coordinate system and definition of wave and coast angles. :math: `\varphi_{c}` is the orientation of the shore normal with respect to North; :math:`\varphi_{w}`\ is the angle of incidence of the waves with respect to North and :math:`\varphi_{loc}`\ is the local angle between waves and coast, defined as :math:`\varphi_{c} - \varphi_{w}`.
 
 Basic equation
 --------------
@@ -31,7 +31,9 @@ Basic equation
 The basic equation for the updating of the coastline position is based
 on the conservation of sediment:
 
-:math:`\frac\{\partial\ n\}\{\partial\ t\} = - \frac\{ 1\}\{ D\_ c\}\frac\{\partial\ Q\_ s\}\{\partial\ s\} - \frac\{\text{RSLR}\}\{\tan\beta\} + \frac\{ 1\}\{ D\_ c\}\sum\ q\_ i`
+.. math::
+   :label:
+   \frac{\partial n}{\partial t} = - \frac{1}{D_{c}\frac{\partial Q_{s}{\partial s} - \frac{\text{RSLR}}{\tan\beta} + \frac{1}{D_{c}\sum\ q_{i}
 
 where *n* is the cross-shore coordinate, *s* the longshore coordinate,
 *t* is time, *D\ c* is the active profile height, *Q\ s* is the
@@ -77,32 +79,32 @@ Table 1 Implemented longshore transport formulations
 | Author                    | Notation | Formula                    |
 +===========================+==========+============================+
 | USACE (1984) (simplified) | CERC1    | .                          |
-|                           |          | . math:: Q\_ s = bH\_\{ S0 |
-|                           |          | \}\hat{}\{ 5/2\} sin\{ 2\} |
-|                           |          | (\phi\_\{ loc\}) |
+|                           |          | . math:: Q_{s} = bH_{S0 |
+|                           |          | }\^{5/2} sin\{2} |
+|                           |          | (\phi_{loc}) |
 +---------------------------+----------+----------------------------+
 | Ashton and Murray (2006)  | CERC2    | ..                         |
-|                           |          |  math:: Q\_ s = K\_ 2H\_\{ |
-|                           |          |  S0\}\hat{}\{\fr |
-|                           |          | ac\{ 12\}\{ 5\}\} T\hat{}\ |
-|                           |          | frac\{ 1\}\{ 5\} |
-|                           |          | \{ cos\}\hat{}\f |
-|                           |          | rac\{ 6\}\{ 5\}\{(\}\backs |
-|                           |          | lash phi\_\{ loc\})sin\{(\ |
-|                           |          | }\phi\_\{ loc\}) |
+|                           |          |  math:: Q_{s} = K_{2H}_{|
+|                           |          |  S0}\^{\fr |
+|                           |          | ac\{12}{5}} T\^{}\ |
+|                           |          | frac{1}{5} |
+|                           |          | \{cos}\^{}\f |
+|                           |          | rac\{6}{5}\{(}\phi_{loc}) |
+|                           |          | sin\{(\ |
+|                           |          | }\phi_{loc}) |
 +---------------------------+----------+----------------------------+
 | USACE (1984)              | CERC3    | ..                         |
-|                           |          |  math:: Q\_ s = bH\_\{ sb\ |
-|                           |          | }\hat{}\{ 5/2\} sin\{ 2\}( |
-|                           |          | \phi\_\{ locb\}) |
+|                           |          |  math:: Q_{s} = bH_{sb\ |
+|                           |          | }\^{}\{5/2} sin\{2}( |
+|                           |          | \phi_{locb}) |
 +---------------------------+----------+----------------------------+
 | Kamphuis (1991)           | KAMP     | ..                         |
-|                           |          |  math:: Q\_ s = 2.33H\_\{  |
-|                           |          | sb\}\hat{}2T\hat{}\{ 1.5\} |
-|                           |          |  m\_ b\hat{}\{ 0.75\} D\_\ |
-|                           |          | { 50\}\hat{}\{ - 0.25\}\{  |
-|                           |          | sin\}\hat{}\{ 0.6\}\{(\} 2 |
-|                           |          | \phi\_\{ locb\}) |
+|                           |          |  math:: Q_{s} = 2.33H_{ |
+|                           |          | sb}\^{}2T\^{}\{1.5} |
+|                           |          |  m_{b}\^{}\{0.75} D_ |
+|                           |          | {50}\^{}\{- 0.25}\{ |
+|                           |          | sin}\^{}\{0.6}\{(} 2 |
+|                           |          | \phi_{locb}) |
 +---------------------------+----------+----------------------------+
 
 In Table 1, *H\ S0* and *H\ sb* are the significant wave height at the
@@ -114,9 +116,13 @@ the relative angle of waves at the breaking point; *b* and *K\ 2* are
 the calibration coefficients of CERC1 and CERC2 formulations
 respectively, which are computed as :.
 
-:math:`b = \frac\{ k\rho\sqrt\{ g/k\}\}\{ 16(\rho\_ s - \rho)(1 - p)\}`
+.. math::
+   :label:
+`b = \frac{k\rho\sqrt\{g/k}}\{16(\rho_{s} - \rho)(1 - p)}`
 
-:math:`K\_ 2 = (\frac\{\sqrt\{ g\gamma\}\}\{ 2\pi\})\hat{}\frac\{ 1\}\{ 5\} K\_ 1,K\_ 1\sim0.4m\hat{}\{ 1/2\}/s`
+.. math::
+   :label:
+`K_{2} = (\frac{\sqrt\{g\gamma}}\{2\pi})\^{}\frac{1}\{5} K_{1},K_{1}\sim0.4m\^{}\{1/2}/s`
 
 where *k* is the default calibration coefficient according to the Shore
 Protection Manual (USACE, 1984), *ρ* the density of the water
@@ -206,7 +212,9 @@ too much smoothing may lead to a loss of planform area and will tend to
 straighten out sections that should not move at all. The smoothing
 formulation applied is a simple 3-point smoothing according to:
 
-:math:`s\_\{ i,smooth\} = fs\_\{ i - 1\} + (1 - 2f)s\_ i + fs\_\{ i + 1\}`
+.. math::
+   :label:
+`s_{i,smooth} = fs_{i - 1} + (1 - 2f)s_{i} + fs_{i + 1}`
 
 where *f* is a smoothing factor, with default value of 0.1. Smoothing
 can lead to losses in the sediment balance and in situations where this
@@ -247,35 +255,45 @@ is calculated for each segment. The difference leads the points to build
 out or to shrink. The mass conservation equation is solved using a
 staggered forward time–central space explicit scheme (see Figure 1):
 
-:math:`\Delta\ n\_ i\hat{}j = - \frac\{ 1\}\{ D\_ c\}\frac\{ 2(Q\_\{ s.i\}\hat{}j - Q\_\{ s,i - 1\}\hat{}j)\}\{ L\_ i\}\Delta\ t`
+.. math::
+   :label:
+`\Delta\ n_{i}\^{}j = - \frac{1}\{D_{c}\frac{2(Q_{s.i}\^{}j - Q_{s,i - 1}\^{}j)}\{L_{i}\Delta\ t`
 
 where *j* is the time step index, :math:`\Delta\ t`\ is the
 time step (yr), *i* is the point/node index and *L\ i* is the length of
 the considered grid element computed from
-:math:`L\_ i = \sqrt\{(x\_\{ i + 1\} - x\_\{ i - 1\})\hat{}2 + (y\_\{ i + 1\} - y\_\{ i - 1\})\hat{}2\}`\ and
+:math:`L_{i} = \sqrt\{(x_{i + 1} - x_{i - 1})\^{}2 + (y_{i + 1} - y_{i - 1})\^{}2}`\ and
 *x\ i* and *y\ i* are the Cartesian coordinates of point *i*. From the
 normal displacement it follows that the change in position of point *i*
 then becomes:
 
-:math:`\Delta\ x\_ i\hat{}j = - \Delta\ n\_ i\hat{}j\left(y\_\{ i + 1\} - y\_\{ i - 1\}\right)/L\_ i\bigm\Delta\ y\_ i\hat{}j = \Delta\ n\_ i\hat{}j\left(x\_\{ i + 1\} - x\_\{ i - 1\}\right)/L\_ i\bigmx\_ i\hat{}\{ j + 1\} = x\_ i\hat{}j + \Delta\ x\_ i\hat{}j\bigmy\_ i\hat{}\{ j + 1\} = y\_ i\hat{}j + \Delta\ y\_ i\hat{}j`
+.. math::
+   :label:
+`\Delta\ x_{i}\^{}j = - \Delta\ n_{i}\^{}j\left(y_{i + 1} - y_{i - 1}\right)/L_{i}\bigm\Delta\ y_{i}\^{}j = \Delta\ n_{i}\^{}j\left(x_{i + 1} - x_{i - 1}\right)/L_{i}\bigmx_{i}\^{}\{j + 1} = x_{i}\^{}j + \Delta\ x_{i}\^{}j\bigmy_{i}\^{}\{j + 1} = y_{i}\^{}j + \Delta\ y_{i}\^{}j`
 
 The scheme can be shown to be conserving the land area. Since an
 explicit scheme is applied, the time step is limited by the following
 criterion (Vitousek & Barnard, 2015):
 
-:math:`\frac\{\varepsilon\Delta\ t\}\{\Delta\ s\hat{}2\} < \frac\{ 1\}\{ 2\}`
+.. math::
+   :label:
+`\frac{\varepsilon\Delta\ t}\{\Delta\ s\^{}2} < \frac{1}\{2}`
 
-where the diffusivity :math:`\varepsilon` is related to the
+where the diffusivity :math: `\varepsilon` is related to the
 maximum gradient of the sediment transport with respect to the wave
 angle relative to the coast, which can be approximated by:
 
-:math:`\{\varepsilon\ cmax\}\_\{ max\}`
+.. math::
+   :label:
+`\{\varepsilon\ cmax}_{max}`
 
 where *Q\ max* is the maximum transport rate in the model.
 
 Therefore the following is obtained:
 
-:math:`\Delta\ t < \frac\{ D\_ c\Delta\ s\hat{}2\}\{ 4Q\_\{ max\}\}`
+.. math::
+   :label:
+`\Delta\ t < \frac{D_{c}\Delta\ s\^{}2}\{4Q_{max}}`
 
 This criterion can be restrictive for small grid sizes (e.g. less than
 100m). Stability is, however, guaranteed through this adaptive timestep.
@@ -392,7 +410,9 @@ moves towards its downdrift side. In that case the lateral boundary
 condition at grid point *i* (see Figure SI05), which is located at the
 groyne representing the bypassed volume can be expressed as:
 
-:math:`QS\_ i = \text{BPFQ}S\_\{ i - 1\}`
+.. math::
+   :label:
+`QS_{i} = \text{BPFQ}S_{i - 1}`
 
 where *QS\ i* is the longshore transport at grid point *i*. There were
 many options for how the bypassed sediment should be distributed
@@ -404,7 +424,9 @@ and to leave the sheltered area untouched. To do so numerically, the
 lateral boundary conditions at the downdrift side of the groyne are set
 as follows:
 
-:math:`Q\{ S\_ i\}\_\{ + 1\} = Q\{ S\_ i\}\_\{ + 2\}... = Q\{ S\_ i\}\_\{ last\} = QS\_ i`
+.. math::
+   :label:
+`Q\{S_{i}}_{+ 1} = Q\{S_{i}}_{+ 2}... = Q\{S_{i}}_{last} = QS_{i}`
 
 Eq. (11) ensures that only the last sheltered grid point obtains all the
 bypassed sediment and equal signs indicate that there is no sediment
@@ -441,7 +463,9 @@ the structure (Hanson, 1989), and represents the time-dependent depth
 for longshore sediment transport, which is often less than closure depth
 *D\ c*, and can be estimated as:
 
-:math:`D\_\{ LT\} = \frac\{ A\_ w\}\{\gamma\}\left(H\_\{ 1/3\}\right)\_ b`
+.. math::
+   :label:
+`D_{LT} = \frac{A_{w}}\{\gamma}\left(H_{1/3}\right)_{b}`
 
 where *A\ w* = 1.27, a factor that converts the 1/10 highest wave height
 to significant wave height [-]; *γ* is the breaker index, the ratio
@@ -451,14 +475,18 @@ is the significant wave height at the line of breaking [m].
 Based on the assumption of equilibrium profile shape (Dean, 1991), the
 water depth at the structure’s head *D\ s* can be determined as:
 
-:math:`D\_ s = A\_ p\{ y\_\{ str\}\}\hat{}\{ 2/3\}`
+.. math::
+   :label:
+`D_{s} = A_{p}\{y_{str}}\^{}\{2/3}`
 
 where *A\ p* is the sediment scale parameter [m\ :sup:`1/3`] and
 *y\ str* is the distance from the structure’s head to the nearest point
 of the coastline [m]. In that case, the bypassing factor (*BPF*) is
 estimated based on the following equation:
 
-:math:`\text{BPF} = 1 - \frac\{ D\_ s\}\{ D\_\{ LT\}\}`
+.. math::
+   :label:
+`\text{BPF} = 1 - \frac{D_{s}}\{D_{LT}}`
 
 and the bypassing volume increases until reaching its maximum value when
 the groyne is filled with sediment [*BPF* =1]. The lateral boundary
