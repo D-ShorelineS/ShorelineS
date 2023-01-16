@@ -36,11 +36,6 @@ on the conservation of sediment:
 
    \frac{\partial n}{\partial t} = - \frac{1}{D_{c}} \frac{\partial Q_{s}}{\partial s} - \frac{\text{RSLR}}{\tan\beta} + \frac{1}{D_{c}} \sum q_{i}
 
-.. math::
-   :label:
-
-   A(x,y,t,\theta )=\frac{S_{w} (x,y,t,\theta )}{\sigma (x,y,t)}
-
 where *n* is the cross-shore coordinate, *s* the longshore coordinate,
 *t* is time, *D\ c* is the active profile height, *Q\ s* is the
 longshore transport (m\ :sup:`3`/yr), tan *β* is the average profile
@@ -86,30 +81,30 @@ Table 1 Implemented longshore transport formulations
 +===========================+==========+============================+
 | USACE (1984) (simplified) | CERC1    | .                          |
 |                           |          | . math:: Q_{s} = bH_{S0 |
-|                           |          | }\^{5/2} sin\{2} |
-|                           |          | (\phi_{loc}) |
+|                           |          | }^{5/2} \sin{2 |
+|                           |          | (\phi_{loc})} |
 +---------------------------+----------+----------------------------+
 | Ashton and Murray (2006)  | CERC2    | ..                         |
 |                           |          |  math:: Q_{s} = K_{2H}_{|
-|                           |          |  S0}\^{\fr |
-|                           |          | ac\{12}{5}} T\^{}\ |
-|                           |          | frac{1}{5} |
-|                           |          | \{cos}\^{}\f |
-|                           |          | rac\{6}{5}\{(}\phi_{loc}) |
-|                           |          | sin\{(\ |
-|                           |          | }\phi_{loc}) |
+|                           |          |  S0}^{\fr |
+|                           |          | ac\{12}{5}} T^{\ |
+|                           |          | frac{1}{5}} |
+|                           |          | \cos^{\f |
+|                           |          | rac\{6}{5}}{(\phi_{loc})} |
+|                           |          | \sin{( |
+|                           |          | \phi_{loc})} |
 +---------------------------+----------+----------------------------+
 | USACE (1984)              | CERC3    | ..                         |
 |                           |          |  math:: Q_{s} = bH_{sb\ |
-|                           |          | }\^{}\{5/2} sin\{2}( |
-|                           |          | \phi_{locb}) |
+|                           |          | }^{5/2} sin\{2( |
+|                           |          | \phi_{locb})} |
 +---------------------------+----------+----------------------------+
 | Kamphuis (1991)           | KAMP     | ..                         |
 |                           |          |  math:: Q_{s} = 2.33H_{ |
-|                           |          | sb}\^{}2T\^{}\{1.5} |
-|                           |          |  m_{b}\^{}\{0.75} D_ |
-|                           |          | {50}\^{}\{- 0.25}\{ |
-|                           |          | sin}\^{}\{0.6}\{(} 2 |
+|                           |          | sb}^{2}T^{1.5} |
+|                           |          |  m_{b}^{0.75} D_ |
+|                           |          | {50}^{- 0.25}\{ |
+|                           |          | sin}^{0.6}\{(} 2 |
 |                           |          | \phi_{locb}) |
 +---------------------------+----------+----------------------------+
 
@@ -124,11 +119,11 @@ respectively, which are computed as :.
 
 .. Math::
    :label:
-`b = \frac{k\rho\sqrt\{g/k}}\{16(\rho_{s} - \rho)(1 - p)}`
+   `b = \frac{k \rho \sqrt{g/k}}{16(\rho_{s} - \rho)(1 - p)}`
 
 .. Math::
    :label:
-`K_{2} = (\frac{\sqrt\{g\gamma}}\{2\pi})\^{}\frac{1}\{5} K_{1},K_{1}\sim0.4m\^{}\{1/2}/s`
+   `K_{2} = (\frac{\sqrt{g\gamma}}{2\pi})^{\frac{1}{5}} K_{1}, K_{1}\sim 0.4 m^{1/2}/s`
 
 where *k* is the default calibration coefficient according to the Shore
 Protection Manual (USACE, 1984), *ρ* the density of the water
@@ -220,7 +215,7 @@ formulation applied is a simple 3-point smoothing according to:
 
 .. Math::
    :label:
-`s_{i,smooth} = fs_{i - 1} + (1 - 2f)s_{i} + fs_{i + 1}`
+   `s_{i,smooth} = fs_{i - 1} + (1 - 2f)s_{i} + fs_{i + 1}`
 
 where *f* is a smoothing factor, with default value of 0.1. Smoothing
 can lead to losses in the sediment balance and in situations where this
@@ -248,7 +243,7 @@ different approximations (Elghandour, 2018).
 
 Given the local wave angle with respect to the coast normal and the
 refracted wave conditions (or deep water wave directions in the case of
-the CERC1 and CERC2 formulas) the longshore transport can be computed at
+the CERC1 and CERC2 formulas) the longshore transport can be computed at\delta
 each transport point between two adjacent coastline points. At present,
 a choice of formulations as listed in Table 1 is available to be used.
 
@@ -263,19 +258,19 @@ staggered forward time–central space explicit scheme (see Figure 1):
 
 .. Math::
    :label:
-`\Delta\ n_{i}\^{}j = - \frac{1}{D_{c} \frac{2(Q_{s.i}\^{}j - Q_{s,i - 1}\^{}j)}\{L_{i}\Delta\ t`
+   `\delta n_{i}^{j} = - \frac{1}{D_{c} \frac{2(Q_{s.i}^{j} - Q_{s,i - 1}^{j})}\{L_{i}\delta t`
 
-where *j* is the time step index, :math:`\Delta\ t`\ is the
+where *j* is the time step index, :math:`\delta t`\ is the
 time step (yr), *i* is the point/node index and *L\ i* is the length of
 the considered grid element computed from
-:math:`L_{i} = \sqrt\{(x_{i + 1} - x_{i - 1})\^{}2 + (y_{i + 1} - y_{i - 1})\^{}2}`\ and
+:math:`L_{i} = \sqrt\{(x_{i + 1} - x_{i - 1})^{2} + (y_{i + 1} - y_{i - 1})^{2}}`\ and
 *x\ i* and *y\ i* are the Cartesian coordinates of point *i*. From the
 normal displacement it follows that the change in position of point *i*
 then becomes:
 
 .. Math::
    :label:
-`\Delta\ x_{i}\^{}j = - \Delta\ n_{i}\^{}j\left(y_{i + 1} - y_{i - 1}\right)/L_{i}\bigm\Delta\ y_{i}\^{}j = \Delta\ n_{i}\^{}j\left(x_{i + 1} - x_{i - 1}\right)/L_{i}\bigmx_{i}\^{}\{j + 1} = x_{i}\^{}j + \Delta\ x_{i}\^{}j\bigmy_{i}\^{}\{j + 1} = y_{i}\^{}j + \Delta\ y_{i}\^{}j`
+`\delta x_{i}^{j} = - \delta n_{i}^{j}\left(y_{i + 1} - y_{i - 1}\right)/L_{i}\bigm\delta y_{i}^{j} = \delta n_{i}^{j}\left(x_{i + 1} - x_{i - 1}\right)/L_{i}\bigmx_{i}^{j + 1} = x_{i}^{j} + \delta x_{i}^{j}\bigmy_{i}^{j + 1} = y_{i}^{j} + \delta y_{i}^{j}`
 
 The scheme can be shown to be conserving the land area. Since an
 explicit scheme is applied, the time step is limited by the following
@@ -283,7 +278,7 @@ criterion (Vitousek & Barnard, 2015):
 
 .. Math::
    :label:
-`\frac{\varepsilon\Delta\ t}\{\Delta\ s\^{}2} < \frac{1}\{2}`
+`\frac{\varepsilon\delta t}\{\delta s^{2}} < \frac{1}\{2}`
 
 where the diffusivity :math: `\varepsilon` is related to the
 maximum gradient of the sediment transport with respect to the wave
@@ -299,7 +294,7 @@ Therefore the following is obtained:
 
 .. Math::
    :label:
-`\Delta\ t < \frac{D_{c}\Delta\ s\^{}2}\{4Q_{max}}`
+`\delta t < \frac{D_{c}\delta s^{2}}\{4Q_{max}}`
 
 This criterion can be restrictive for small grid sizes (e.g. less than
 100m). Stability is, however, guaranteed through this adaptive timestep.
@@ -483,7 +478,7 @@ water depth at the structure’s head *D\ s* can be determined as:
 
 .. Math::
    :label:
-`D_{s} = A_{p}\{y_{str}}\^{}\{2/3}`
+`D_{s} = A_{p}\{y_{str}}^{2/3}`
 
 where *A\ p* is the sediment scale parameter [m\ :sup:`1/3`] and
 *y\ str* is the distance from the structure’s head to the nearest point
