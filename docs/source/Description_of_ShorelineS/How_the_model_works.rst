@@ -19,13 +19,12 @@ simulation continues.
 
 .. _fig-image001:
 
-.. figure:: ../images/image001.jpg
+.. figure:: images/image001.jpg
    :width: 400px
-   :align: left
-   Coastline-following coordinate system and definition of wave and coast angles. 
-   :math:`\backslash varphi\_ c` is the orientation of the shore normal with respect to North; 
-   :math:`\backslash varphi\_ w`\ is the angle of incidence of the waves with respect to North and :math:`\backslash varphi\_\{ loc\}`\ the local angle between waves and coast, 
-   defined as :math:`\backslash varphi\_ c - \backslash varphi\_ w`.
+   :align: center
+
+   ss
+Coastline-following coordinate system and definition of wave and coast angles. :math:`\backslash varphi\_ c` is the orientation of the shore normal with respect to North; :math:`\backslash varphi\_ w`\ is the angle of incidence of the waves with respect to North and :math:`\backslash varphi\_\{ loc\}`\ the local angle between waves and coast, defined as :math:`\backslash varphi\_ c - \backslash varphi\_ w`.
 
 Basic equation
 --------------
