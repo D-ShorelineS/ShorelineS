@@ -34,7 +34,12 @@ on the conservation of sediment:
 .. Math::
    :label:
 
-   \frac{\partial n}{\partial t} = - \frac{1}{D_{c} \frac{\partial Q_{s}}{\partial s} - \frac{\text{RSLR}}{\tan\beta} + \frac{1}{D_{c}} \sum q_{i}
+   \frac{\partial n}{\partial t} = - \frac{1}{D_{c}} \frac{\partial Q_{s}}{\partial s} - \frac{\text{RSLR}}{\tan\beta} + \frac{1}{D_{c}} \sum q_{i}
+
+.. math::
+   :label:
+
+   A(x,y,t,\theta )=\frac{S_{w} (x,y,t,\theta )}{\sigma (x,y,t)}
 
 where *n* is the cross-shore coordinate, *s* the longshore coordinate,
 *t* is time, *D\ c* is the active profile height, *Q\ s* is the
