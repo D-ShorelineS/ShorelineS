@@ -74,39 +74,40 @@ coefficient, whereas the KAMP formula requires, usually uncertain, extra
 inputs such as beach slope and grain size but has the ambition to be a
 more accurate, predictive formula.
 
-Table 1 Implemented longshore transport formulations
+.. _tab-Implemented-longshore-transport:
 
-+---------------------------+----------+----------------------------+
-| Author                    | Notation | Formula                    |
-+===========================+==========+============================+
-| USACE (1984) (simplified) | CERC1    | .                          |
-|                           |          | . math:: Q_{s} = bH_{S0 |
-|                           |          | }^{5/2} \sin{2 |
-|                           |          | (\phi_{loc})} |
-+---------------------------+----------+----------------------------+
-| Ashton and Murray (2006)  | CERC2    | ..                         |
-|                           |          |  math:: Q_{s} = K_{2H}_{|
-|                           |          |  S0}^{\fr |
-|                           |          | ac\{12}{5}} T^{\ |
-|                           |          | frac{1}{5}} |
-|                           |          | \cos^{\f |
-|                           |          | rac\{6}{5}}{(\phi_{loc})} |
-|                           |          | \sin{( |
-|                           |          | \phi_{loc})} |
-+---------------------------+----------+----------------------------+
-| USACE (1984)              | CERC3    | ..                         |
-|                           |          |  math:: Q_{s} = bH_{sb\ |
-|                           |          | }^{5/2} sin\{2( |
-|                           |          | \phi_{locb})} |
-+---------------------------+----------+----------------------------+
-| Kamphuis (1991)           | KAMP     | ..                         |
-|                           |          |  math:: Q_{s} = 2.33H_{ |
-|                           |          | sb}^{2}T^{1.5} |
-|                           |          |  m_{b}^{0.75} D_ |
-|                           |          | {50}^{- 0.25}\{ |
-|                           |          | sin}^{0.6}\{(} 2 |
-|                           |          | \phi_{locb}) |
-+---------------------------+----------+----------------------------+
+.. table:: Implemented longshore transport formulations
+    +---------------------------+----------+----------------------------+
+    | Author                    | Notation | Formula                    |
+    +===========================+==========+============================+
+    | USACE (1984) (simplified) | CERC1    | .                          |
+    |                           |          | . math:: Q_{s} = bH_{S0 |
+    |                           |          | }^{5/2} \sin{2 |
+    |                           |          | (\phi_{loc})} |
+    +---------------------------+----------+----------------------------+
+    | Ashton and Murray (2006)  | CERC2    | ..                         |
+    |                           |          |  math:: Q_{s} = K_{2H}_{|
+    |                           |          |  S0}^{\fr |
+    |                           |          | ac\{12}{5}} T^{\ |
+    |                           |          | frac{1}{5}} |
+    |                           |          | \cos^{\f |
+    |                           |          | rac\{6}{5}}{(\phi_{loc})} |
+    |                           |          | \sin{( |
+    |                           |          | \phi_{loc})} |
+    +---------------------------+----------+----------------------------+
+    | USACE (1984)              | CERC3    | ..                         |
+    |                           |          |  math:: Q_{s} = bH_{sb\ |
+    |                           |          | }^{5/2} sin\{2( |
+    |                           |          | \phi_{locb})} |
+    +---------------------------+----------+----------------------------+
+    | Kamphuis (1991)           | KAMP     | ..                         |
+    |                           |          |  math:: Q_{s} = 2.33H_{ |
+    |                           |          | sb}^{2}T^{1.5} |
+    |                           |          |  m_{b}^{0.75} D_ |
+    |                           |          | {50}^{- 0.25}\{ |
+    |                           |          | sin}^{0.6}\{(} 2 |
+    |                           |          | \phi_{locb}) |
+    +---------------------------+----------+----------------------------+
 
 In Table 1, *H\ S0* and *H\ sb* are the significant wave height at the
 offshore location and point of breaking respectively (m), *T* is the
