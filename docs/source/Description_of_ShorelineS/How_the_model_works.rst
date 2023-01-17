@@ -9,7 +9,7 @@ fixed reference line, while avoiding the complexities of grid-based
 approaches and geometrically complex volume reconstructions, a new
 Shoreline Simulation model (ShorelineS) was developed, which is aimed at
 predicting coastline evolution over periods of years to centuries. Its
-description of coastlines is of strings of grid points (see Figure 1)
+description of coastlines is of strings of grid points (see :numref:`fig-image001`)
 that can move around, expand and shrink freely. The coastline points are
 assumed to be representative of the movement of the active coastal
 profile, and hence are situated at the MSL contour. The model can have
@@ -54,7 +54,7 @@ The coastline changes are driven by wave-driven longshore transport,
 which is computed using a choice of formulations, which can be
 calibrated to match the local transport rates. The formulations listed
 in Table 1 have been implemented. The definitions of the angles are as
-in Figure 1.
+in :numref:`fig-image001`.
 
 CERC1 and CERC2 are defined in terms of the offshore wave angle, and
 CERC3 and KAMP are defined in terms of the breaking wave angle. However,
@@ -89,7 +89,7 @@ more accurate, predictive formula.
     | Kamphuis (1991)           | KAMP     | ..math:: Q_{s} = 2.33H_{sb}^{2}T^{1.5} m_{b}^{0.75} D_{50}^{- 0.25}\{sin}^{0.6}\{(} 2\phi_{locb})                     |
     +---------------------------+----------+-----------------------------------------------------------------------------------------------------------------------+
 
-In Table 1, *H\ S0* and *H\ sb* are the significant wave height at the
+In :numref:`tab-Implemented-longshore-transport`, *H\ S0* and *H\ sb* are the significant wave height at the
 offshore location and point of breaking respectively (m), *T* is the
 peak wave period (s), *D\ 50* is the median grain diameter (m), *m\ b*
 is the mean bed slope (beach slope in the breaking zone), *Φ\ loc* is
@@ -116,12 +116,17 @@ Numerical implementation
 ------------------------
 
 The ShorelineS model is implemented in Matlab. The flow diagram of the
-model is depicted in Figure 2. In the following we will describe the
+model is depicted in :numref:`fig-image002`. In the following we will describe the
 procedure point by point.
 
-|image1|
+.. _fig-image002:
 
-Figure 2. Flow diagram of the ShorelineS model.
+.. figure:: images/image002.jpg
+   :width: 400px
+   :align: center
+
+   Flow diagram of the ShorelineS model.
+
 
 The coastline positions are given in two column vectors *x\ mc* and
 *y\ mc*, where the different coast sections are separated by NaN’s. The
@@ -235,7 +240,7 @@ At each point the local direction of the coast is determined from the
 two adjacent points (as a reference line), then the longshore transport
 is calculated for each segment. The difference leads the points to build
 out or to shrink. The mass conservation equation is solved using a
-staggered forward time–central space explicit scheme (see Figure 1):
+staggered forward time–central space explicit scheme (see :numref:`fig-image001`):
 
 .. Math::
    :label:
@@ -288,7 +293,7 @@ A special treatment takes care of so-called high-angle instability
 local angle exceeds the critical angle on one side and is less than the
 critical angle at the updrift side, the transport at the downdrift point
 is set to the maximum transport (or the angle is set to the critical
-angle). Figure 3 illustrates the effect of this treatment, where a
+angle). :numref:`fig-image003` illustrates the effect of this treatment, where a
 central scheme would lead to unstable behavior, the local upwind
 treatment ensures a smooth development into a spit. The physics in the
 model is the same as in Ashton et al. (2001, 2016), and Ashton and
