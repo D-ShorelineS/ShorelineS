@@ -256,7 +256,7 @@ then becomes:
 
 .. Math::
    :label:
-`\delta x_{i}^{j} = - \delta n_{i}^{j}\left(y_{i + 1} - y_{i - 1}\right)/L_{i}\bigm\delta y_{i}^{j} = \delta n_{i}^{j}\left(x_{i + 1} - x_{i - 1}\right)/L_{i}\bigmx_{i}^{j + 1} = x_{i}^{j} + \delta x_{i}^{j}\bigmy_{i}^{j + 1} = y_{i}^{j} + \delta y_{i}^{j}`
+   `\delta x_{i}^{j} = - \delta n_{i}^{j}\left(y_{i + 1} - y_{i - 1}\right)/L_{i}\bigm\delta y_{i}^{j} = \delta n_{i}^{j}\left(x_{i + 1} - x_{i - 1}\right)/L_{i}\bigmx_{i}^{j + 1} = x_{i}^{j} + \delta x_{i}^{j}\bigmy_{i}^{j + 1} = y_{i}^{j} + \delta y_{i}^{j}`
 
 The scheme can be shown to be conserving the land area. Since an
 explicit scheme is applied, the time step is limited by the following
@@ -264,7 +264,7 @@ criterion (Vitousek & Barnard, 2015):
 
 .. Math::
    :label:
-`\frac{\varepsilon\delta t}\{\delta s^{2}} < \frac{1}\{2}`
+   `\frac{\varepsilon\delta t}\{\delta s^{2}} < \frac{1}\{2}`
 
 where the diffusivity :math: `\varepsilon` is related to the
 maximum gradient of the sediment transport with respect to the wave
@@ -272,7 +272,7 @@ angle relative to the coast, which can be approximated by:
 
 .. Math::
    :label:
-`\{\varepsilon\ cmax}_{max}`
+   `\{\varepsilon\ cmax}_{max}`
 
 where *Q\ max* is the maximum transport rate in the model.
 
@@ -280,7 +280,7 @@ Therefore the following is obtained:
 
 .. Math::
    :label:
-`\delta t < \frac{D_{c}\delta s^{2}}\{4Q_{max}}`
+   `\delta t < \frac{D_{c}\delta s^{2}}\{4Q_{max}}`
 
 This criterion can be restrictive for small grid sizes (e.g. less than
 100m). Stability is, however, guaranteed through this adaptive timestep.
@@ -303,12 +303,17 @@ the same behavior with a vector-based rather than a grid-based approach.
 This is more elegant and more efficient, especially when large areas
 need to be covered.
 
-|image2|
+.. _Example1:
+   :align: center
 
-|image3|
+   .. image:: images/image003.jpg
+      :width: 400px
 
-Figure 3. Example of high-angle instability with standard central scheme
-(A) and upwind scheme (B).
+   .. image:: images/image004.jpg
+      :width: 400px
+
+           
+   Example of high-angle instability with standard central scheme (A) and upwind scheme (B).
 
 Barrier or spit overwash
 ------------------------
@@ -399,7 +404,7 @@ groyne representing the bypassed volume can be expressed as:
 
 .. Math::
    :label:
-`QS_{i} = \text{BPFQ}S_{i - 1}`
+   `QS_{i} = \text{BPFQ}S_{i - 1}`
 
 where *QS\ i* is the longshore transport at grid point *i*. There were
 many options for how the bypassed sediment should be distributed
@@ -413,7 +418,7 @@ as follows:
 
 .. Math::
    :label:
-`Q\{S_{i}}_{+ 1} = Q\{S_{i}}_{+ 2}... = Q\{S_{i}}_{last} = QS_{i}`
+   `Q\{S_{i}}_{+ 1} = Q\{S_{i}}_{+ 2}... = Q\{S_{i}}_{last} = QS_{i}`
 
 Eq. (11) ensures that only the last sheltered grid point obtains all the
 bypassed sediment and equal signs indicate that there is no sediment
@@ -452,7 +457,7 @@ for longshore sediment transport, which is often less than closure depth
 
 .. Math::
    :label:
-`D_{LT} = \frac{A_{w}}\{\gamma}\left(H_{1/3}\right)_{b}`
+   `D_{LT} = \frac{A_{w}}\{\gamma}\left(H_{1/3}\right)_{b}`
 
 where *A\ w* = 1.27, a factor that converts the 1/10 highest wave height
 to significant wave height [-]; *γ* is the breaker index, the ratio
@@ -464,7 +469,7 @@ water depth at the structure’s head *D\ s* can be determined as:
 
 .. Math::
    :label:
-`D_{s} = A_{p}\{y_{str}}^{2/3}`
+   `D_{s} = A_{p}\{y_{str}}^{2/3}`
 
 where *A\ p* is the sediment scale parameter [m\ :sup:`1/3`] and
 *y\ str* is the distance from the structure’s head to the nearest point
@@ -473,7 +478,7 @@ estimated based on the following equation:
 
 .. Math::
    :label:
-`\text{BPF} = 1 - \frac{D_{s}}\{D_{LT}}`
+   `\text{BPF} = 1 - \frac{D_{s}}\{D_{LT}}`
 
 and the bypassing volume increases until reaching its maximum value when
 the groyne is filled with sediment [*BPF* =1]. The lateral boundary
