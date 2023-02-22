@@ -16,68 +16,44 @@ Model Inputs
 Simulation wave parameters:
 ^^^^^^^^^
 
-		S.Hso
-		  :description:		wave height
-		  :units:		[m]
-		  :default:		1
-		  :min:			-
-		  :max:			-	  
-		S.phiw0
-		  :description:		deep water wave angle 
-		  :units:		degrees
-		  :default:		330
-		  :min:			-
-		  :max:			-
-		S.spread
-		  :description:		wave spreading (wave_dir from range:  S.phiw0 +/- 0.5*S.spread)
-		  :units:		degrees
-		  :default:		90
-		  :min:			-
-		  :max:			-
-		S.WVCfile
-		  :description:		wave time-series file path <-leave empty to use wave parameters ('S.Hso', 'S.phiw0' and 'S.spread')
-		  :units:		-
-		  :default:		''
-		  :min:			-
-		  :max:			-
-		S.Hso
-		  :description:		wave height
-		  :units:		[m]
-		  :default:		1
-		  :min:			-
-		  :max:			-
+	S.Hso
+		:description:		wave height
+		:units:		[m]
+		:default:		1
+		:min:			-
+		:max:			-	  
+	S.phiw0
+		:description:		deep water wave angle 
+		:units:		degrees
+		:default:		330
+		:min:			-
+		:max:			-
+	S.spread
+		:description:		wave spreading (wave_dir from range:  S.phiw0 +/- 0.5*S.spread)
+		:units:		degrees
+		:default:		90
+		:min:			-
+		:max:			-
+	S.WVCfile
+		:description:		wave time-series file path <-leave empty to use wave parameters ('S.Hso', 'S.phiw0' and 'S.spread')
+		:units:		-
+		:default:		''
+		:min:			-
+		:max:			-
+	S.Hso
+		:description:		wave height
+		:units:		[m]
+		:default:		1
+		:min:			-
+		:max:			-
 
 
 
 Advanced Input parameters (only for advanced users)
 -----
 
-	bndtype        
-	  :description:		Boundary type for interpretation of 'sfincs.bzs' time-series. bndtype=1 is for water levels, bndtype=2 (advanced) is for horizontal velocities (in m/s) and bndtype=3 (advanced) for horizontal discharges (in m2/s).
-	  :units:		-
-	  :default:		1
-	  :min:			1
-	  :max:			3
-	rhoa
-	  :description:		Density of the air
-	  :units:		kg/m3
-	  :default:		1.25
-	  :min:			-
-	  :max:			-
-	rhow
-	  :description:		Density of the water
-	  :units:		kg/m3
-	  :default:		1024
-	  :min:			-
-	  :max:			-
+
 Model Output Parameters
 -----
 
-	tref
-	  :description:		Reference date in 'yyyymmdd HHMMSS'
-	  :units:		-
-	  :default:		20000101 000000
-	tstart
-	  :description:		Start date in 'yyyymmdd HHMMSS'
-	  :units:		-	
-	  :default:		20000101 000000				  
+		  
