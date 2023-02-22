@@ -1,12 +1,12 @@
 Overview of tutorial models
 ===========================
 
-In order to setup a model using ShorleineS code, The user should have MATLAB or Octave installed.
+In order to setup a model using ShorleineS code, The use should have MATLAB or Octave installed.
 
 Using the below link, the ShorelineS model code and examples can be downloaded:
 link: 
 
-To make the setup of basic models easier, making a ShorelineS model is supported by 2 open source available options:
+To make the setting up of basic models easier, making a ShorelineS model is supported by 2 open source available options:
 
 * Graphical User Interface (GUI) to make ShorelineS models interactively: **'Delft Dashboard'**  --Under Develeopment
 * Matlab scripts toolbox in the **'Open Earth Toolbox'**
@@ -15,14 +15,19 @@ If you need a more tailor-made solution for setting up your ShorelineS models ge
 
 Open Earth Tools
 -----
-For getting started with Open Earth Tools see: https://publicwiki.deltares.nl/display/OET/OpenEarth
-To make the functionality available, run the function oetsettings.
+Checkout the Open Earth Tools from: 
+To make the functionality available, run the function oetsettings
 
 .. figure:: ./images/image_001.png
    :width: 800px
    :align: center
 
    Setting the functions path and running the oetsettings through the command line of MATLAB	
+
+In the Open Earth Tools a toolbox of Matlab scripts is included to have more flexibility in setting up your ShorelineS models.
+Throughout this User Manual examples of how to use these scripts are given in the code blocks '**Matlab example using OET**'.
+For a general overview of possible input files and how to create them using Matlab scripts see: https://svn.oss.deltares.nl/repos/openearthtools/trunk/matlab/applications/sfincs/
+For getting started with Open Earth Tools see: https://publicwiki.deltares.nl/display/OET/OpenEarth
 
 
 Walk-through model set-up

@@ -14,6 +14,7 @@ Welcome to the documentation of ShorelineS!
    Description_of_ShorelineS/Description_of_ShorelineS
    Technical_description/Technical_description
    Getting_started/Getting_started
+   Input_Parameters_and_Files/Input_Parameters_and_Files
    Processing/Processing
    References/References
    Appendix/Appendix

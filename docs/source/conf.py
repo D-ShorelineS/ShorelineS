@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.abspath('../..'))
 
 project = 'ShorelineS'
 copyright = '2022, IHE Delft & Deltares'
-author = 'Mostafa Saleh'
+author = 'IHE Delft & Deltares'
 
 # The full version, including alpha/beta/rc tags
 release = '1.1'

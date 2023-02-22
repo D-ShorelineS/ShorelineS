@@ -1,0 +1,58 @@
+Input and Output Parameters
+===========================
+
+Intorduction:
+-----------
+     
+Model Inputs
+-----
+
+	mmax
+	  :description:		Number of grid cells in x-direction
+	  :units:		-
+	  :default:		0
+	  :min:			1
+	  :max:			Inf (recommended is to limit the total number of active cells to max 3 million)
+	nmax
+	  :description:		Number of grid cells in y-direction
+	  :units:		-
+	  :default:		0
+	  :min:			1
+	  :max:			Inf (recommended is to limit the total number of active cells to max 3 million)	  
+
+
+
+
+
+Advanced Input parameters (only for advanced users)
+-----
+
+	bndtype        
+	  :description:		Boundary type for interpretation of 'sfincs.bzs' time-series. bndtype=1 is for water levels, bndtype=2 (advanced) is for horizontal velocities (in m/s) and bndtype=3 (advanced) for horizontal discharges (in m2/s).
+	  :units:		-
+	  :default:		1
+	  :min:			1
+	  :max:			3
+	rhoa
+	  :description:		Density of the air
+	  :units:		kg/m3
+	  :default:		1.25
+	  :min:			-
+	  :max:			-
+	rhow
+	  :description:		Density of the water
+	  :units:		kg/m3
+	  :default:		1024
+	  :min:			-
+	  :max:			-
+Model Output Parameters
+-----
+
+	tref
+	  :description:		Reference date in 'yyyymmdd HHMMSS'
+	  :units:		-
+	  :default:		20000101 000000
+	tstart
+	  :description:		Start date in 'yyyymmdd HHMMSS'
+	  :units:		-	
+	  :default:		20000101 000000				  
