@@ -1,4 +1,4 @@
-Input Parameters and Files
+Input and Output Parameters and Files
 ==========================
 
 .. toctree::
