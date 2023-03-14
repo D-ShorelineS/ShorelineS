@@ -18,34 +18,50 @@ Simulation wave parameters:
 
 	S.Hso
 		:description:		wave height
-		:units:		[m]
-		:default:		1
-		:min:			-
-		:max:			-	  
+		:units:		    	[m]
+		:default:			1
+		:min:				-
+		:max:				-	  
 	S.phiw0
 		:description:		deep water wave angle 
-		:units:		degrees
-		:default:		330
-		:min:			-
-		:max:			-
+		:units:		    	degrees
+		:default:			330
+		:min:				-
+		:max:				-
 	S.spread
 		:description:		wave spreading (wave_dir from range:  S.phiw0 +/- 0.5*S.spread)
-		:units:		degrees
-		:default:		90
-		:min:			-
-		:max:			-
-	S.WVCfile
-		:description:		wave time-series file path <-leave empty to use wave parameters ('S.Hso', 'S.phiw0' and 'S.spread')
-		:units:		-
-		:default:		''
-		:min:			-
-		:max:			-
-	S.Hso
-		:description:		wave height
-		:units:		[m]
-		:default:		1
-		:min:			-
-		:max:			-
+		:units:		    	degrees
+		:default:			90
+		:min:				-
+		:max:				-
+	S.Wavecorr
+		:description:		?
+		:extension:			-
+		:default:			0
+		:min:				-
+		:max:				-
+	S.ddeep
+		:description:		Waterdepth at the location of wave climate, corresponding with S.Hso
+		:units:		    	[m]
+		:default:			25
+		:min:				-
+		:max:				-
+	S.dnearshore
+		:description:		Waterdepth at the 'dynamic boundary', corresponding with S.phif
+		:units:		    	[m]
+		:default:			8
+		:min:				-
+		:max:				-
+	S.interpolationmethod
+		:description:		Method for interpolating wave data of multiple wave stations on the coast
+		:units:		    	-
+		:default:			'alongshore_mapping'
+		:aletrnatives:		'weighted_distance'
+
+Simulation coastline definition:
+^^^^^^^^^
+
+
 
 
 
