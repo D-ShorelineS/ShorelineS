@@ -13,9 +13,9 @@ Model Inputs
 	  :default:		-
 	  :min:			-
 	  :max:			-
+
 Simulation wave parameters:
 ^^^^^^^^^
-
 	S.Hso
 		:description:		wave height
 		:units:		    	[m]
@@ -60,7 +60,21 @@ Simulation wave parameters:
 
 Simulation coastline definition:
 ^^^^^^^^^
+	S.phif
+		:description:		Orientation of the foreshore [?N]; only relevant for 'KAMP', 'MILH' or 'VR14'
+		:units:		    	(in degrees)
+		:default:			[]
+		:min:				-
+		:max:				-
+	S.d
+		:description:		active profile height 
+		:units:		    	[m]
+		:default:			10
+		:min:				-
+		:max:				-
 
+Simulation transport parameters:
+^^^^^^^^^
 
 
 
